@@ -16,7 +16,9 @@ public class RespawnManager : MonoBehaviour
             for (int j = 0; j < objCnt; j++)
             {
                 Mobpool.Add(CreateObj(Mobs[i], transform));
+                
             }
+            
         }
     }
 
@@ -30,7 +32,7 @@ public class RespawnManager : MonoBehaviour
         while (true)
         {
             Mobpool[DeactiveMob()].SetActive(true);
-            yield return new WaitForSeconds(Random.Range(1f, 3f));
+            yield return new WaitForSeconds(Random.Range(9f, 12f));
         }
     }
 
